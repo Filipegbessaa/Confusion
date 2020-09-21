@@ -149,8 +149,9 @@
                         <div class="form-group row">
                             <label for="smokingOrNot" class="col-8 col-sm-2">Section</label>
                             <div class="btn-group btn-group-toggle col-12 col-sm-4" data-toggle="buttons">
-                                <label class="btn btn-success">
-                                    <input type="radio" name="smokingornot" id="Non-Smoking" autocomplete="off" checked> Non-Smoking
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="smokingornot" id="Non-Smoking" autocomplete="off">
+                                    Non-Smoking
                                 </label>
                                 <label class="btn btn-danger">
                                     <input type="radio" name="smokingornot" id="Smoking" autocomplete="off"> Smoking
@@ -169,6 +170,7 @@
                         </div>
                         <div class="form-group row">
                             <div class="offset-sm-2 col-sm-6">
+                                <button type="submit" class="btn btn-secondary">Cancel</button>
                                 <button type="submit" class="btn btn-primary">Reserve</button>
                             </div>
                         </div>
@@ -230,6 +232,14 @@
                         <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
+                        <div class="btn-group" id="carouselButtons">
+                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                <span class="fa fa-pause"></span>
+                            </button>
+                            <button class="btn btn-danger btn-sm" id="carousel-play">
+                                <span class="fa fa-play"></span>
+                            </button>                      
+                        </div>
                     </div>
                 </div>
             </div>
@@ -293,7 +303,7 @@
                 </div>
             </div>
         </div>
-            </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -345,6 +355,17 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval:1000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause')
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle')
+            });
+        });
+    </script>
 </body>
 
 </html>
