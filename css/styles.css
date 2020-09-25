@@ -60,10 +60,18 @@ body {
   min-height: 300px;
 }
 
-#carouselButton {
+#carousel-button {
   right: 0px;
   position: absolute;
   bottom: 0px;
   z-index: 1;
+}
+
+.modal .modal-header {
+  background: #512DA8;
+}
+
+.modal .modal-body {
+  background: #D1C4E9;
 }
 /*# sourceMappingURL=styles.css.map */
